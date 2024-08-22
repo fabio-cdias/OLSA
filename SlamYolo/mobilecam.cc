@@ -347,7 +347,7 @@ int main(int argc, char **argv) {
     
 
     // YOLO Inference
-    std::string projectBasePath = "/home/fabio/Projects/ComputerVision/ORB_SLAM3_YOLO/SlamYolo";
+    std::string projectBasePath = "/home/fabio/Projects/ComputerVision/OLSA/SlamYolo";
     bool runOnGPU = false;
     Inference inf(projectBasePath + "/yolov5nu.onnx", cv::Size(640, 480), "classes.txt", runOnGPU);
 
@@ -360,7 +360,7 @@ int main(int argc, char **argv) {
     int frameID = 0;
 
 
-    glFont = new pangolin::GlFont("/home/fabio/Projects/ComputerVision/ORB_SLAM3_YOLO/SlamYolo/Arial.ttf", 30,5000,5000);
+    glFont = new pangolin::GlFont("/home/fabio/Projects/ComputerVision/OLSA/SlamYolo/Arial.ttf", 30,5000,5000);
 
 
     ALCdevice* device = alcOpenDevice(nullptr);
@@ -374,7 +374,7 @@ int main(int argc, char **argv) {
     } else {
         std::cout << "HRTF is not enabled." << std::endl;
 }
-    std::vector<ALuint> buffers = storeAudioBuffer("/home/fabio/Projects/ComputerVision/ORB_SLAM3_YOLO/SlamYolo/Audio");
+    std::vector<ALuint> buffers = storeAudioBuffer("/home/fabio/Projects/ComputerVision/OLSA/SlamYolo/Audio");
     
     
     std::vector<Object> objects;
